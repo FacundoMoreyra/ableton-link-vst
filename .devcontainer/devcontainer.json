@@ -1,0 +1,28 @@
+{
+    "name": "JUCE Development",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--net=host",
+        "--env=DISPLAY=${localEnv:DISPLAY}",
+        "--device=/dev/snd:/dev/snd",
+        "--group-add=audio",
+        "--cap-add=SYS_NICE",
+        "-v=/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        "--ipc=host",
+        "--user=vscode"
+    ],
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

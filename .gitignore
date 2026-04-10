@@ -1,0 +1,46 @@
+# Build directories
+build/
+_builds/
+cmake-build-*/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# Node.js (React GUI - no longer used but keep for safety)
+node_modules/
+dist/
+*.log
+.npm/
+
+# JUCE
+Builds/
+JuceLibraryCode/
+
+# Artifacts
+*.vst3
+*.vst
+*.component
+*.app
+*.so
+*.dylib
+
+# Keep these specific artifact folders ignored
+link-bridge/build/
+link-bridge/gui/
+juce-vst/build/
+juce-vst/_builds/
